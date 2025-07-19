@@ -58,12 +58,14 @@
                     </view>
                     <navigationItem key="navigationItem" title="Login" largeTitleDisplayMode="always" id="ssd-8M-ZxF"/>
                     <connections>
+                        <outlet property="forgotUsername" destination="pTG-zv-tBB" id="3xF-2W-LOc"/>
                         <outlet property="username" destination="AYC-UE-Cwo" id="2WA-O5-U3h"/>
+                        <segue destination="Dfh-Cz-NIV" kind="show" identifier="landing" id="Hrd-do-9OC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1066.4122137404579" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="1044" y="4"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Px9-gH-No3">
@@ -101,6 +103,9 @@
             <point key="canvasLocation" x="139.69465648854961" y="3.5211267605633805"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="4pN-hb-3VE"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemGray3Color">
             <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

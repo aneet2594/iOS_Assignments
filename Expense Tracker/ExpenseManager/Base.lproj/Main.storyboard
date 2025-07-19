@@ -205,32 +205,18 @@
                                                             <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
                                                         </buttonConfiguration>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NmX-nh-vr5">
-                                                        <rect key="frame" x="0.0" y="586" width="992" height="80"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title="See Details">
-                                                            <fontDescription key="titleFontDescription" type="system" pointSize="40"/>
-                                                        </buttonConfiguration>
-                                                    </button>
                                                 </subviews>
                                                 <constraints>
                                                     <constraint firstItem="yRb-c9-Ni7" firstAttribute="height" secondItem="kea-ES-dYU" secondAttribute="height" multiplier="0.12" id="116-se-bVD"/>
-                                                    <constraint firstItem="NmX-nh-vr5" firstAttribute="height" secondItem="kea-ES-dYU" secondAttribute="height" multiplier="0.12" id="3Vn-Pa-Den"/>
                                                     <constraint firstItem="ZvX-zV-B80" firstAttribute="height" secondItem="kea-ES-dYU" secondAttribute="height" multiplier="0.2" id="AKs-53-Vx9"/>
                                                     <constraint firstItem="kVq-IL-cdx" firstAttribute="height" secondItem="IvK-PH-inV" secondAttribute="height" id="PRt-7I-JeX"/>
                                                     <constraint firstItem="kVq-IL-cdx" firstAttribute="height" secondItem="YE2-gs-LDO" secondAttribute="height" id="aTI-Lc-58v"/>
                                                     <constraint firstItem="mTF-S4-2xs" firstAttribute="height" secondItem="kea-ES-dYU" secondAttribute="height" multiplier="0.15" id="wWI-8N-FfL"/>
                                                 </constraints>
-                                                <variation key="default">
-                                                    <mask key="subviews">
-                                                        <exclude reference="NmX-nh-vr5"/>
-                                                    </mask>
-                                                </variation>
                                                 <variation key="heightClass=compact" spacing="2"/>
                                                 <variation key="heightClass=regular-widthClass=regular">
                                                     <mask key="subviews">
                                                         <exclude reference="yRb-c9-Ni7"/>
-                                                        <include reference="NmX-nh-vr5"/>
                                                     </mask>
                                                 </variation>
                                             </stackView>
