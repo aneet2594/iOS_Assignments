@@ -1,4 +1,3 @@
-//
 //  ViewController.swift
 //  Personality Quiz
 //
@@ -7,7 +6,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class IntroductionViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
