@@ -28,15 +28,15 @@ class ResultsViewController: UIViewController {
     var responses: [Answer]
     
     let frequencyOfAnswers = responses.reduce (into:
-    [AnimalType: Int]()) { (counts, answer) in
-    if let existingCount = counts[answer.type] {
-    counts[answer.type] = existingCount + 1
-    } else {
-    counts[answer.type] = 1
+                                                [AnimalType: Int]()) { (counts, answer) in
+        if let existingCount = counts[answer.type] {
+            counts[answer.type] = existingCount + 1
+        } else {
+            counts[answer.type] = 1
+        }
+        
+        let mostCommonAnswer = frequencyOfAnswers.sorted { $0.1 > $1.1 }.first!.key
     }
-    
-    let mostCommonAnswer = frequencyOfAnswers.sorted { $0.1 > $1.1 }.first!.key
-
     /*
     // MARK: - Navigation
 
