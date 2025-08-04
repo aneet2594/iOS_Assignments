@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aeb-jD-LOj">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Bio-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AboutMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bio" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OjY-bP-wmk">
+                                <rect key="frame" x="164" y="143" width="65" height="51"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="Jl1-77-ON8">
+                                <rect key="frame" x="76" y="202" width="241" height="128"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cO4-d6-zkn">
+                                <rect key="frame" x="16" y="352" width="361" height="360"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="157" id="Zeb-lC-PNO"/>
+                                </constraints>
+                                <string key="text">I'm a data analyst with 4 years of experience turning messy numbers into clear insights. I specialize in creating dashboards that help teams make better decisions faster. I’m currently looking for new opportunities where I can grow with a mission-driven company. My work style is proactive, curious, and grounded in making things useful, not just interesting. Outside of work, I run a blog on productivity hacks for job seekers.
+
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.0" green="0.81867252414510572" blue="0.86078912019729614" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="OjY-bP-wmk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="5H0-Gy-vxu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cO4-d6-zkn" secondAttribute="bottom" constant="162" id="6B0-e5-vkB"/>
+                            <constraint firstItem="Jl1-77-ON8" firstAttribute="top" secondItem="OjY-bP-wmk" secondAttribute="bottom" constant="48" id="CF2-W5-G2L"/>
+                            <constraint firstItem="OjY-bP-wmk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FAN-l1-g4y"/>
+                            <constraint firstItem="cO4-d6-zkn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Q49-gN-6df"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="OjY-bP-wmk" secondAttribute="bottom" constant="541" id="UIv-pY-7Q9"/>
+                            <constraint firstItem="cO4-d6-zkn" firstAttribute="centerX" secondItem="Jl1-77-ON8" secondAttribute="centerX" id="UqA-dD-Afc"/>
+                            <constraint firstItem="cO4-d6-zkn" firstAttribute="top" secondItem="Jl1-77-ON8" secondAttribute="bottom" constant="46" id="aCx-T1-0oz"/>
+                            <constraint firstItem="OjY-bP-wmk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="164" id="dqT-Ro-qz9"/>
+                            <constraint firstItem="Jl1-77-ON8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="76" id="fwS-Ml-I91"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="cO4-d6-zkn" secondAttribute="trailing" constant="16" id="h2y-qd-xBI"/>
+                            <constraint firstItem="cO4-d6-zkn" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="tV5-6M-5cn"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Bio" image="house" catalog="system" id="bdA-Uk-tUB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="762.59541984732823" y="3.5211267605633805"/>
+        </scene>
+        <!--Family-->
+        <scene sceneID="ADj-zE-zZy">
+            <objects>
+                <viewController id="YzR-JG-cUs" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="58g-cC-SkW">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Family" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C7a-G9-rDr">
+                                <rect key="frame" x="141" y="143" width="111" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fam" translatesAutoresizingMaskIntoConstraints="NO" id="ReK-Yv-4ex">
+                                <rect key="frame" x="55" y="337" width="283" height="178"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="oTL-xB-OC2"/>
+                        <color key="backgroundColor" red="1" green="0.28915912513959852" blue="0.27825502631604304" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="ReK-Yv-4ex" firstAttribute="centerY" secondItem="58g-cC-SkW" secondAttribute="centerY" id="0jv-WG-eWS"/>
+                            <constraint firstItem="C7a-G9-rDr" firstAttribute="top" secondItem="oTL-xB-OC2" secondAttribute="top" constant="25" id="FLo-0L-z6S"/>
+                            <constraint firstItem="ReK-Yv-4ex" firstAttribute="centerX" secondItem="58g-cC-SkW" secondAttribute="centerX" id="n9J-UQ-13W"/>
+                            <constraint firstItem="C7a-G9-rDr" firstAttribute="centerX" secondItem="58g-cC-SkW" secondAttribute="centerX" id="puo-b9-OVE"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Family" image="figure.2.and.child.holdinghands" catalog="system" id="5VX-1B-7je"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i2y-44-cTB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1408.3969465648854" y="3.5211267605633805"/>
+        </scene>
+        <!--My Life-->
+        <scene sceneID="iRj-Qq-oLr">
+            <objects>
+                <viewController id="u0l-Jk-v0z" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jyf-ST-tpI">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Life" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Vx-pE-lUt">
+                                <rect key="frame" x="134" y="143" width="125" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7xX-wG-vRk"/>
+                        <color key="backgroundColor" red="0.96805574863597676" green="1" blue="0.32806985103691488" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="8Vx-pE-lUt" firstAttribute="top" secondItem="7xX-wG-vRk" secondAttribute="top" constant="25" id="4sx-9q-SRb"/>
+                            <constraint firstItem="8Vx-pE-lUt" firstAttribute="centerX" secondItem="Jyf-ST-tpI" secondAttribute="centerX" id="DRI-tA-v8V"/>
+                            <constraint firstItem="8Vx-pE-lUt" firstAttribute="leading" secondItem="7xX-wG-vRk" secondAttribute="leading" constant="134" id="h4O-5s-eLH"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="My Life" image="person.crop.circle" catalog="system" id="O1F-gF-UDn"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S1u-Zm-spN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2043.5114503816792" y="3.5211267605633805"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="1h8-8Y-eR6">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="aeb-jD-LOj" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mvP-Hb-96E">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <imageReference key="backgroundImage" image="house" catalog="system" symbolScale="medium"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="OmS-go-RMJ"/>
+                        <segue destination="YzR-JG-cUs" kind="relationship" relationship="viewControllers" id="WgX-LP-QJD"/>
+                        <segue destination="u0l-Jk-v0z" kind="relationship" relationship="viewControllers" id="llB-aQ-2Gp"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lel-2U-ZIH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-164.12213740458014" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Image" width="357" height="200"/>
+        <image name="fam" width="283" height="178"/>
+        <image name="figure.2.and.child.holdinghands" catalog="system" width="128" height="93"/>
+        <image name="house" catalog="system" width="128" height="104"/>
+        <image name="person.crop.circle" catalog="system" width="128" height="123"/>
+    </resources>
+</document>

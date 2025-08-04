@@ -37,7 +37,7 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🦁" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vkn-3G-mOV">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🐶" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vkn-3G-mOV">
                                 <rect key="frame" x="16" y="62" width="45" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <nil key="textColor"/>
@@ -88,7 +88,7 @@
         <!--Results-->
         <scene sceneID="eHa-br-Gdw">
             <objects>
-                <viewController id="n4A-6g-GZ6" sceneMemberID="viewController">
+                <viewController id="n4A-6g-GZ6" customClass="ResultsViewController" customModule="Personality_Quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uxG-oL-xGd">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -120,10 +120,19 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Results" id="Yg5-fg-aqI">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="C3O-gb-8Yt"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="C3O-gb-8Yt">
+                            <connections>
+                                <segue destination="cwz-hb-r0D" kind="unwind" unwindAction="unwindToQuizIntroductionWithSegue:" id="9Ze-25-HbP"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="resultAnswerLabel" destination="0In-wj-uBY" id="5WR-A6-oD2"/>
+                        <outlet property="resultDefinationLabel" destination="qAQ-A7-0LK" id="qy9-g9-Dgh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vn3-E0-JfK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="cwz-hb-r0D" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1738.1679389312976" y="11.971830985915494"/>
         </scene>
@@ -278,7 +287,7 @@
                                 <rect key="frame" x="20" y="759" width="353" height="4"/>
                             </progressView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HRK-KV-W4f">
-                                <rect key="frame" x="20" y="168" width="353" height="38.333333333333314"/>
+                                <rect key="frame" x="20" y="168" width="353" height="38.333333333333343"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>

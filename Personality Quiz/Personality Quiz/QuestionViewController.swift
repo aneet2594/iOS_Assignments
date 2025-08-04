@@ -43,7 +43,7 @@ class QuestionViewController: UIViewController {
             text: "Which food do you like the most?",
             type: .single,
             answers: [
-                Answer(text: "Steak", type: .lion),
+                Answer(text: "Steak", type: .dog),
                 Answer (text: "Fish", type: .cat),
                 Answer (text: "Carrots", type: .rabbit),
                 Answer (text: "Corn", type: .turtle)
@@ -56,7 +56,7 @@ class QuestionViewController: UIViewController {
                 Answer (text: "Swimming", type: .turtle),
                 Answer(text: "Sleeping", type: .cat),
                 Answer (text: "Cuddling", type: .rabbit),
-                Answer(text: "Eating", type: .lion)
+                Answer(text: "Eating", type: .dog)
             ]
         ),
         Question (
@@ -66,7 +66,7 @@ class QuestionViewController: UIViewController {
                 Answer(text: "I dislike them", type: .cat),
                 Answer(text: "I get a little nervous", type: .rabbit),
                 Answer(text: "I barely notice them", type: .turtle),
-                Answer(text: "I love them", type: .lion)
+                Answer(text: "I love them", type: .dog)
             ]
         )
     ]
