@@ -206,6 +206,7 @@
                     <connections>
                         <outlet property="descriptionTextField" destination="KP1-To-Gey" id="eNx-bX-SfS"/>
                         <outlet property="nameTextFiled" destination="bus-ei-MWY" id="YBl-B7-9Do"/>
+                        <outlet property="saveButton" destination="Lm2-EN-rS4" id="ONF-NW-tsu"/>
                         <outlet property="symbolTextField" destination="Q76-FO-ZoP" id="fDV-wB-Nxh"/>
                         <outlet property="usageTextFiled" destination="932-Ge-03v" id="pUQ-Cq-Fz8"/>
                     </connections>

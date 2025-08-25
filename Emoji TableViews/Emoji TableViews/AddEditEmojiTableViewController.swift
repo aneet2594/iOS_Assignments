@@ -14,6 +14,9 @@ class AddEditEmojiTableViewController: UITableViewController {
     @IBOutlet weak var descriptionTextField: UITextField!
     @IBOutlet weak var usageTextFiled: UITextField!
     
+    @IBOutlet weak var saveButton: UIBarButtonItem!
+    
+    
     
     var emoji: Emoji?
     
@@ -46,6 +49,18 @@ class AddEditEmojiTableViewController: UITableViewController {
         } else {
             title = "Add Emoji"
         }
+        
+        updateSaveButtonState()
+    }
+    
+    func updateSaveButtonState() {
+        
+        let symbolText = symbolTextField.text ?? ""
+        let nameText = nameTextFiled.text ?? ""
+        let descriptionText = descriptionTextField.text ?? ""
+        let usageText = usageTextFiled.text ?? ""
+        
+        saveButton.isEnabled = !symbolText.isEmpty && !nameText.isEmpty && !descriptionText.isEmpty && !usageText.isEmpty
     }
 
     // MARK: - Table view data source
