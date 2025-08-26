@@ -24,6 +24,12 @@ class EmojiTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
          self.navigationItem.leftBarButtonItem = self.editButtonItem
+        
+        if let savedEmojis = Emoji.loadFromFile() {
+                emojis = savedEmojis
+            } else {
+                emojis = Emoji.sampleEmojis()
+            }
     }
 
     // MARK: - Table view data source
@@ -69,6 +75,8 @@ class EmojiTableViewController: UITableViewController {
             
             emojis.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
+            Emoji.saveToFile(emojis: emojis)
+            
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
@@ -82,6 +90,8 @@ class EmojiTableViewController: UITableViewController {
         let removedEmoji = emojis.remove(at: fromIndexPath.row)
         emojis.insert(removedEmoji, at: to.row)
         
+        Emoji.saveToFile(emojis: emojis)
+        
     }
     
     override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
@@ -90,17 +100,22 @@ class EmojiTableViewController: UITableViewController {
     
     
     @IBAction func unwindToEmojiTVC(segue: UIStoryboardSegue) {
-        guard segue.identifier == "saveSegue", let addEditTVC = segue.source as? AddEditTableViewController, let emoji = addEditTVC.emoji else { return }
-        guard let selectedIndexPath = tableView.indexPathForSelectedRow else {
-            emojis.append(emoji)
-            let indexPath = IndexPath(row: emojis.count - 1, section: 0)
-            tableView.insertRows(at: [indexPath], with: .fade)
-            return }
-        
-        emojis[selectedIndexPath.row] = emoji
-        tableView.reloadRows(at: [selectedIndexPath], with: .fade)
-        //tableView.reloadData()
-        
+        guard segue.identifier == "saveSegue",
+                  let addEditTVC = segue.source as? AddEditTableViewController,
+                  let emoji = addEditTVC.emoji else { return }
+            
+            if let selectedIndexPath = tableView.indexPathForSelectedRow {
+
+                emojis[selectedIndexPath.row] = emoji
+                tableView.reloadRows(at: [selectedIndexPath], with: .fade)
+            } else {
+
+                emojis.append(emoji)
+                let indexPath = IndexPath(row: emojis.count - 1, section: 0)
+                tableView.insertRows(at: [indexPath], with: .fade)
+            }
+            
+            Emoji.saveToFile(emojis: emojis)
     }
     
 
