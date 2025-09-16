@@ -11,25 +11,39 @@ class RegistrationTableViewController: UITableViewController {
     
     
     
+    
     @IBAction func unwindFromAddRegistration(unwindSegue: UIStoryboardSegue) {
         
         guard let addRegistrationTableViewController = unwindSegue.source as? AddRegistrationTableViewController,
-              let registration = addRegistrationTableViewController.registration
-        else { return }
-        
-        registrations.append(registration)
-        tableView.reloadData()
+                      let registration = addRegistrationTableViewController.registration else { return }
+                
+                if let selectedIndexPath = tableView.indexPathForSelectedRow {
+                    // Editing existing registration → replace it
+                    registrations[selectedIndexPath.row] = registration
+                } else {
+                    // Adding new registration → append it
+                    registrations.append(registration)
+                }
+                
+                tableView.reloadData()
         
     }
     
     
-    @IBSegueAction func registrationDetail(_ coder: NSCoder) -> UINavigationController? {
-        
-        return <#UINavigationController(coder: coder)#>
+//    @IBSegueAction func registrationDetail(_ coder: NSCoder) -> UINavigationController? {
+//
+//        return <#UINavigationController(coder: coder)#>
+//    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowRegistrationDetail" {
+            if let destination = segue.destination as? AddRegistrationTableViewController,
+               let indexPath = tableView.indexPathForSelectedRow {
+                destination.existingRegistration = registrations[indexPath.row]
+                destination.isReadOnly = true
+            }
+        }
     }
-    
-    
-    
     
     var registrations: [Registration] = []
 

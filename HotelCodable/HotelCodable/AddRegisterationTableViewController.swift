@@ -25,6 +25,10 @@ class AddRegistrationTableViewController: UITableViewController, SelectRoomTypeT
         return selectRoomTypeController
     }
     
+    var existingRegistration: Registration?
+    var isReadOnly: Bool = false
+
+    
     @IBOutlet weak var firstNameTextField: UITextField!
     @IBOutlet weak var lastNameTextFiled: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
@@ -60,8 +64,40 @@ class AddRegistrationTableViewController: UITableViewController, SelectRoomTypeT
 
         
         let midnightToday = Calendar.current.startOfDay(for: Date())
-        checkInDatePicker.minimumDate = midnightToday
-        checkInDatePicker.date = midnightToday
+           checkInDatePicker.minimumDate = midnightToday
+           checkInDatePicker.date = midnightToday
+           
+           updateDateViews()
+           updateNumberOfGuests()
+           updateRoomType()
+           
+           // NEW: prefill if editing/viewing
+           if let reg = existingRegistration {
+               firstNameTextField.text = reg.firstName
+               lastNameTextFiled.text = reg.lastName
+               emailTextField.text = reg.emailAddress
+               checkInDatePicker.date = reg.checkInDate
+               checkOutDatePicker.date = reg.checkOutDate
+               numberOfAdultsStepper.value = Double(reg.numberOfAdults)
+               numberOfChildrenStepper.value = Double(reg.numberOfChildren)
+               wifiSwitch.isOn = reg.wifi
+               roomType = reg.roomType
+               updateRoomType()
+           }
+           
+           // NEW: lock down if read-only
+           if isReadOnly {
+               firstNameTextField.isEnabled = false
+               lastNameTextFiled.isEnabled = false
+               emailTextField.isEnabled = false
+               checkInDatePicker.isEnabled = false
+               checkOutDatePicker.isEnabled = false
+               numberOfAdultsStepper.isEnabled = false
+               numberOfChildrenStepper.isEnabled = false
+               wifiSwitch.isEnabled = false
+               // Hide "Done" button if using navigation bar
+               navigationItem.rightBarButtonItem = nil
+           }
         
         updateDateViews()
         updateNumberOfGuests()
